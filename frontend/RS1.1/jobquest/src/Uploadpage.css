@@ -1,0 +1,67 @@
+/* src/Uploadpage.css */
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.resume-message h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.resume-message {
+  text-align: left;
+  padding: 2rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 800px;
+}
+
+.resume-message p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 22px; /* Increase the font size */
+  font-family: 'Roboto', sans-serif; /* Apply a modern font style */
+}
+
+.Upload {
+    margin-top: 20px;
+}
+
+.Upload button {
+  background-color: #6DB0D3;
+  color: #00000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Upload button:hover {
+    background-color: #0056b3;
+}
+.Upload input[type="file"] {
+  font-size: 16px;
+}
+
+.Upload input[type="file"]::file-selector-button {
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Upload input[type="file"]::file-selector-button:hover {
+  background-color: #0056b3;
+}
