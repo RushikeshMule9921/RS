@@ -1,0 +1,64 @@
+.recommendation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.recommendation-message p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.recommendation-message {
+  text-align: left;
+  padding: 2rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 800px;
+}
+.job-recommendations {
+  margin-top: 2rem;
+
+}
+
+.job-recommendations table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.job-recommendations th, .job-recommendations td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.job-recommendations th {
+  background-color: #f0f0f0;
+}
+
+.job-recommendations tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.job-recommendations tr:hover {
+  background-color: #ccc;
+}
+.reload {
+    margin-top: 20px;
+}
+.reload button {
+  background-color: #6DB0D3;
+  color: #00000;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 35px;
+}
