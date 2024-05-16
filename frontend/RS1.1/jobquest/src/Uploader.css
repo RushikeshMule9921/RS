@@ -30,6 +30,7 @@
 
 .Upload {
     margin-top: 20px;
+
 }
 
 .Upload button {
@@ -42,6 +43,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-left: 35px;
 }
 
 .Upload button:hover {
