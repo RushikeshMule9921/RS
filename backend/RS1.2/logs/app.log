@@ -1,0 +1,55 @@
+2024-05-20 23:44:15,687 INFO Application started.
+2024-05-20 23:44:21,972 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-20 23:44:21,978 INFO [33mPress CTRL+C to quit[0m
+2024-05-20 23:44:45,022 INFO 127.0.0.1 - - [20/May/2024 23:44:45] "OPTIONS /signin HTTP/1.1" 200 -
+2024-05-20 23:44:45,884 INFO User authenticated successfully
+2024-05-20 23:44:45,886 INFO 127.0.0.1 - - [20/May/2024 23:44:45] "POST /signin HTTP/1.1" 200 -
+2024-05-20 23:44:53,211 INFO Text extracted from resume PDF
+2024-05-20 23:44:53,211 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-20 23:44:53,211 INFO Text cleaned successfully
+2024-05-20 23:44:58,238 INFO Skills extracted from resume
+2024-05-20 23:45:01,715 INFO User embedding generated successfully
+2024-05-20 23:45:01,983 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-20 23:45:02,018 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-20 23:45:02,019 INFO Top 10 job recommendations generated
+2024-05-20 23:45:02,020 INFO 127.0.0.1 - - [20/May/2024 23:45:02] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-20 23:47:12,837 INFO Text extracted from resume PDF
+2024-05-20 23:47:12,838 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-20 23:47:12,838 INFO Text cleaned successfully
+2024-05-20 23:47:17,206 INFO Skills extracted from resume
+2024-05-20 23:47:17,369 INFO User embedding generated successfully
+2024-05-20 23:47:17,580 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-20 23:47:17,583 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-20 23:47:17,583 INFO Top 10 job recommendations generated
+2024-05-20 23:47:17,584 INFO 127.0.0.1 - - [20/May/2024 23:47:17] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-20 23:47:25,656 ERROR No file uploaded
+2024-05-20 23:47:25,656 INFO 127.0.0.1 - - [20/May/2024 23:47:25] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-20 23:50:10,137 ERROR No file uploaded
+2024-05-20 23:50:10,138 INFO 127.0.0.1 - - [20/May/2024 23:50:10] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-20 23:58:20,334 INFO Application started.
+2024-05-20 23:58:27,996 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-05-20 23:58:27,997 INFO [33mPress CTRL+C to quit[0m
+2024-05-20 23:58:34,117 INFO Text extracted from resume PDF
+2024-05-20 23:58:34,117 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-20 23:58:34,117 INFO Text cleaned successfully
+2024-05-20 23:58:39,075 INFO Skills extracted from resume
+2024-05-20 23:58:41,468 INFO User embedding generated successfully
+2024-05-20 23:58:41,704 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-20 23:58:41,740 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-20 23:58:41,741 INFO Top 10 job recommendations generated
+2024-05-20 23:58:41,744 INFO 127.0.0.1 - - [20/May/2024 23:58:41] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 00:03:01,867 INFO Text extracted from resume PDF
+2024-05-21 00:03:01,868 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 00:03:01,870 INFO Text cleaned successfully
+2024-05-21 00:03:07,874 INFO Skills extracted from resume
+2024-05-21 00:03:08,803 INFO User embedding generated successfully
+2024-05-21 00:03:09,063 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 00:03:09,081 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 00:03:09,081 INFO Top 10 job recommendations generated
+2024-05-21 00:03:09,083 INFO 127.0.0.1 - - [21/May/2024 00:03:09] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 00:03:44,218 ERROR No file uploaded
+2024-05-21 00:03:44,225 INFO 127.0.0.1 - - [21/May/2024 00:03:44] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 00:03:45,798 ERROR No file uploaded
+2024-05-21 00:03:45,798 INFO 127.0.0.1 - - [21/May/2024 00:03:45] "POST /api/process-resume HTTP/1.1" 200 -
