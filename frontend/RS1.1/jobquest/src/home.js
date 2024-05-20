@@ -5,6 +5,10 @@ import Navbar from './navbar';
 import Footer from './footer';
 
 class Home extends React.Component {
+  componentDidMount() {
+    document.title = "Home - JobQuest";
+  }
+
   render() {
     return (
       <div>
