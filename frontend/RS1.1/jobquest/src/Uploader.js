@@ -83,22 +83,28 @@ const Uploader = () => {
   };
 
   const sendResumeToBackend = async () => {
-    try {
-      const formData = new FormData();
-      formData.append('resume', resumeFile);
+  try {
+    const formData = new FormData();
+    formData.append('resume', resumeFile);
 
-      const response = await axios.post('http://127.0.0.1:5000/api/process-resume', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      });
+    const response = await axios.post('http://127.0.0.1:5000/api/process-resume', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    });
 
-      setMessage(response.data.message);
+    setMessage(response.data.message);
+
+    if (response.data.jobRecommendations !== undefined) {
       navigate(`/recommendations?data=${encodeURIComponent(JSON.stringify(response.data.jobRecommendations))}`);
-    } catch (error) {
-      console.error('Error sending resume to backend:', error);
+    } else {
+      // Handle case where job recommendations are undefined
+      console.log('No job recommendations available');
     }
-  };
+  } catch (error) {
+    console.error('Error sending resume to backend:', error);
+  }
+};
 
   const handleSignOut = async () => {
     try {
