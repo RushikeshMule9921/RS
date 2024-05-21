@@ -1,11 +1,5 @@
 pipeline {
     agent any
-
-    environment {
-        // Environment variables for Docker Hub credentials
-        DOCKERHUB_CREDENTIALS = credentials('rushidocker')
-    }
-
     stages {
         stage('Stage 1: Clone repository') {
             steps {
@@ -25,7 +19,7 @@ pipeline {
             steps {
                 script {
                     // Login to Docker Hub and push the images
-                    docker.withRegistry('', 'DOCKERHUB_CREDENTIALS') {
+                    docker.withRegistry('', 'rushidocker') {
                         docker_image_backend.push('latest')
                         docker_image_frontend.push('latest')
                     }
