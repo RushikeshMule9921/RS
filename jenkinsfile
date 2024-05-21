@@ -1,11 +1,45 @@
-//123456712323
 pipeline {
     agent any
+
+    environment {
+        // Environment variables for Docker Hub credentials
+        DOCKERHUB_CREDENTIALS = credentials('rushidocker')
+    }
 
     stages {
         stage('Stage 1: Clone repository') {
             steps {
                 checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/RushikeshMule9921/RS.git']]])
+            }
+        }
+        stage('Stage 2: Build Docker Images') {
+            steps {
+                script {
+                    // Building Docker images for backend and frontend
+                    docker_image_backend = docker.build("rushikeshmule9921/backend", 'backend/.')
+                    docker_image_frontend = docker.build("rushikeshmule9921/frontend", 'frontend/.')
+                }
+            }
+        }
+        stage('Stage 3: Push Docker Images') {
+            steps {
+                script {
+                    // Login to Docker Hub and push the images
+                    docker.withRegistry('', 'DOCKERHUB_CREDENTIALS') {
+                        docker_image_backend.push('latest')
+                        docker_image_frontend.push('latest')
+                    }
+                }
+            }
+        }
+        stage('Stage 4: Deploy with Ansible') {
+            steps {
+                script {
+                    // Run the Ansible playbook to deploy Docker Compose stack
+                    sh '''
+                    ansible-playbook -i localhost, deploy.yml
+                    '''
+                }
             }
         }
     }
