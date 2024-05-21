@@ -5,8 +5,8 @@ networks:
 
 services:
   backend:
-    image: sambit417/backend1:latest
-    container_name: spe_backend1
+    image: rushikeshmule9921/backend:latest
+    container_name: spe_backend
     ports:
       - "5000:5000"
     networks:
@@ -16,8 +16,8 @@ services:
     # You may also need to expose additional headers and methods as needed
 
   frontend:
-    image: sambit417/spe_frontend:latest
-    container_name: spe_frontend1
+    image: rushikeshmule9921/frontend:latest
+    container_name: spe_frontend
     ports:
       - "3000:3000"
     networks:
