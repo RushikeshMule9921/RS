@@ -53,3 +53,18 @@
 2024-05-21 00:03:44,225 INFO 127.0.0.1 - - [21/May/2024 00:03:44] "POST /api/process-resume HTTP/1.1" 200 -
 2024-05-21 00:03:45,798 ERROR No file uploaded
 2024-05-21 00:03:45,798 INFO 127.0.0.1 - - [21/May/2024 00:03:45] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 11:19:49,400 INFO Application started.
+2024-05-21 11:20:01,441 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2024-05-21 11:20:01,442 INFO [33mPress CTRL+C to quit[0m
+2024-05-21 11:20:32,541 INFO Text extracted from resume PDF
+2024-05-21 11:20:32,545 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 11:20:32,545 INFO Text cleaned successfully
+2024-05-21 11:20:42,074 INFO Skills extracted from resume
+2024-05-21 11:20:45,018 INFO User embedding generated successfully
+2024-05-21 11:20:45,368 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 11:20:45,436 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 11:20:45,437 INFO Top 10 job recommendations generated
+2024-05-21 11:20:45,442 INFO 127.0.0.1 - - [21/May/2024 11:20:45] "POST /api/process-resume HTTP/1.1" 200 -

@@ -41,7 +41,7 @@ logging.basicConfig(filename="logs/app.log", level=logging.INFO,
 logging.info("Application started.")
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 #------------------------------------------------------
 # Load the job embeddings
 with open('job_embeddings.pickle', 'rb') as f:
@@ -240,4 +240,4 @@ def process_resume():
 
 #----------------------------------------------------------------------------
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
