@@ -26,7 +26,17 @@ pipeline {
                 }
             }
         }
-        stage('Stage 4: Deploy with Ansible') {
+        
+        stage('Stage 4: Clean docker images') {
+            steps {
+                script {
+                    sh 'docker container prune -f'
+                    sh 'docker image prune -f'
+                }
+            }
+        }
+        
+        stage('Stage 5: Deploy with Ansible') {
             steps {
                 script {
                     // Run the Ansible playbook to deploy Docker Compose stack
