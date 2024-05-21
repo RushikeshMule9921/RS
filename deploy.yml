@@ -1,8 +1,7 @@
 - name: Deploy Docker Compose
   hosts: localhost
-  gather_facts: no  # Disable gathering facts
-  become: false     # Disable privilege escalation
-  
+  gather_facts: no
+  connection: local
   tasks:
     - name: Pull Backend Image
       docker_image:
@@ -15,4 +14,5 @@
         source: pull
 
     - name: Start Docker Compose stack
-      command: docker-compose up
+      command: docker-compose up -d
+
