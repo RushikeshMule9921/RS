@@ -1,0 +1,13 @@
+tensorflow
+spacy
+PyMuPDF
+skillNer
+PyPDF2
+transformers
+flask
+flask_cors
+numpy
+pandas
+torch
+firebase-admin
+IPython
