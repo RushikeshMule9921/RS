@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Stage 1: Clone repository') {
+            steps {
+                checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: "${https://github.com/RushikeshMule9921/RS.git}"]]])
+            }
+        }
+        
+    }
+}
