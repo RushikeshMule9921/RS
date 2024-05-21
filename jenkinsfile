@@ -16,8 +16,8 @@ pipeline {
             steps {
                 script {
                     // Building Docker images for backend and frontend
-                    docker_image_backend = docker.build("rushikeshmule9921/backend", 'backend/.')
-                    docker_image_frontend = docker.build("rushikeshmule9921/frontend", 'frontend/.')
+                    docker_image_backend = docker.build("rushikeshmule9921/backend", 'backend/RS1.2/.')
+                    docker_image_frontend = docker.build("rushikeshmule9921/frontend", 'frontend/RS1.1/jobquest/.')
                 }
             }
         }
