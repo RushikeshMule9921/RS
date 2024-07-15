@@ -51,9 +51,12 @@ const Recommendations = () => {
 
   // Add LinkedIn URLs to each job recommendation
   const jobRecommendationsWithLinks = jobRecommendations.map((job, index) => ({
-    title: job,
-    url: `https://www.linkedin.com/jobs/view/${index + 1000000}` // Example LinkedIn job links
+    //index: index + 1, // Job index (1-based)
+    title: job[0],    // Job title
+    url: job[1]       // Job link
   }));
+
+
 
   const handleSignOut = async () => {
     try {

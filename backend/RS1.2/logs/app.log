@@ -77,3 +77,274 @@
 2024-05-21 11:36:30,373 INFO Cosine similarity matrix and merged DataFrame generated successfully
 2024-05-21 11:36:30,384 INFO Top 10 job recommendations generated
 2024-05-21 11:36:30,577 INFO 127.0.0.1 - - [21/May/2024 11:36:30] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 15:44:26,283 INFO Text extracted from resume PDF
+2024-05-21 15:44:26,299 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 15:44:26,299 INFO Text cleaned successfully
+2024-05-21 15:44:34,690 INFO Skills extracted from resume
+2024-05-21 15:44:37,607 INFO User embedding generated successfully
+2024-05-21 15:44:38,061 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 15:44:38,150 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 15:44:38,151 INFO Top 10 job recommendations generated
+2024-05-21 15:44:38,175 INFO 127.0.0.1 - - [21/May/2024 15:44:38] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 19:39:03,729 INFO Text extracted from resume PDF
+2024-05-21 19:39:03,760 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 19:39:03,760 INFO Text cleaned successfully
+2024-05-21 19:39:12,222 INFO Text extracted from resume PDF
+2024-05-21 19:39:12,222 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 19:39:12,222 INFO Text cleaned successfully
+2024-05-21 19:39:17,071 INFO Skills extracted from resume
+2024-05-21 19:39:20,108 INFO Skills extracted from resume
+2024-05-21 19:39:21,783 INFO User embedding generated successfully
+2024-05-21 19:39:21,783 INFO User embedding generated successfully
+2024-05-21 19:39:22,262 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 19:39:22,266 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 19:39:22,379 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 19:39:22,379 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 19:39:22,379 INFO Top 10 job recommendations generated
+2024-05-21 19:39:22,379 INFO Top 10 job recommendations generated
+2024-05-21 19:39:22,379 INFO 127.0.0.1 - - [21/May/2024 19:39:22] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 19:39:22,394 INFO 127.0.0.1 - - [21/May/2024 19:39:22] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-21 21:20:26,284 INFO Application started.
+2024-05-21 21:20:43,479 INFO Text extracted from resume PDF
+2024-05-21 21:20:43,486 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-21 21:20:43,486 INFO Text cleaned successfully
+2024-05-21 21:20:53,930 INFO Skills extracted from resume
+2024-05-21 21:20:56,070 INFO User embedding generated successfully
+2024-05-21 21:20:56,299 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-21 21:20:56,314 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-21 21:20:56,314 INFO Top 10 job recommendations generated
+2024-05-22 12:40:48,475 ERROR No file uploaded
+2024-05-22 12:40:48,501 INFO 127.0.0.1 - - [22/May/2024 12:40:48] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 12:40:49,398 ERROR No file uploaded
+2024-05-22 12:40:49,399 INFO 127.0.0.1 - - [22/May/2024 12:40:49] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 13:57:51,299 INFO Text extracted from resume PDF
+2024-05-22 13:57:51,310 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 13:57:51,310 INFO Text cleaned successfully
+2024-05-22 13:57:58,260 INFO Skills extracted from resume
+2024-05-22 13:58:00,851 INFO User embedding generated successfully
+2024-05-22 13:58:01,208 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 13:58:01,388 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 13:58:01,390 INFO Top 10 job recommendations generated
+2024-05-22 13:58:01,410 INFO 127.0.0.1 - - [22/May/2024 13:58:01] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:16:09,248 INFO Text extracted from resume PDF
+2024-05-22 14:16:09,248 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 14:16:09,248 INFO Text cleaned successfully
+2024-05-22 14:16:15,444 INFO Skills extracted from resume
+2024-05-22 14:16:15,654 INFO User embedding generated successfully
+2024-05-22 14:16:15,889 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 14:16:15,918 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 14:16:15,918 INFO Top 10 job recommendations generated
+2024-05-22 14:16:15,918 INFO 127.0.0.1 - - [22/May/2024 14:16:15] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:18:52,626 ERROR No file uploaded
+2024-05-22 14:18:52,627 INFO 127.0.0.1 - - [22/May/2024 14:18:52] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:00,018 ERROR No file uploaded
+2024-05-22 14:19:00,018 INFO 127.0.0.1 - - [22/May/2024 14:19:00] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:02,276 ERROR No file uploaded
+2024-05-22 14:19:02,277 INFO 127.0.0.1 - - [22/May/2024 14:19:02] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:02,285 ERROR No file uploaded
+2024-05-22 14:19:02,285 INFO 127.0.0.1 - - [22/May/2024 14:19:02] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:41,443 ERROR No file uploaded
+2024-05-22 14:19:41,443 INFO 127.0.0.1 - - [22/May/2024 14:19:41] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:41,636 ERROR No file uploaded
+2024-05-22 14:19:41,636 INFO 127.0.0.1 - - [22/May/2024 14:19:41] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:41,830 ERROR No file uploaded
+2024-05-22 14:19:41,830 INFO 127.0.0.1 - - [22/May/2024 14:19:41] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:42,718 ERROR No file uploaded
+2024-05-22 14:19:42,718 INFO 127.0.0.1 - - [22/May/2024 14:19:42] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:42,724 ERROR No file uploaded
+2024-05-22 14:19:42,724 INFO 127.0.0.1 - - [22/May/2024 14:19:42] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,019 ERROR No file uploaded
+2024-05-22 14:19:43,019 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,023 ERROR No file uploaded
+2024-05-22 14:19:43,024 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,347 ERROR No file uploaded
+2024-05-22 14:19:43,347 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,350 ERROR No file uploaded
+2024-05-22 14:19:43,351 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,650 ERROR No file uploaded
+2024-05-22 14:19:43,650 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:19:43,655 ERROR No file uploaded
+2024-05-22 14:19:43,656 INFO 127.0.0.1 - - [22/May/2024 14:19:43] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 14:22:40,944 INFO Application started.
+2024-05-22 14:22:59,903 INFO Text extracted from resume PDF
+2024-05-22 14:22:59,904 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 14:22:59,904 INFO Text cleaned successfully
+2024-05-22 14:23:06,923 INFO Skills extracted from resume
+2024-05-22 14:23:09,234 INFO User embedding generated successfully
+2024-05-22 14:23:09,521 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 14:23:09,551 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 14:23:09,552 INFO Top 10 job recommendations generated
+2024-05-22 14:23:09,559 ERROR No file uploaded
+2024-05-22 14:48:20,148 INFO Application started.
+2024-05-22 14:48:28,815 INFO Text extracted from resume PDF
+2024-05-22 14:48:28,818 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 14:48:28,818 INFO Text cleaned successfully
+2024-05-22 14:48:35,338 INFO Skills extracted from resume
+2024-05-22 14:48:37,623 INFO User embedding generated successfully
+2024-05-22 14:48:37,889 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 14:48:37,967 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 14:48:37,969 INFO Top 10 job recommendations generated
+2024-05-22 15:13:34,440 INFO Text extracted from resume PDF
+2024-05-22 15:13:34,454 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 15:13:34,454 INFO Text cleaned successfully
+2024-05-22 15:13:42,028 INFO Skills extracted from resume
+2024-05-22 15:13:44,363 INFO User embedding generated successfully
+2024-05-22 15:13:44,681 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 15:13:44,748 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 15:13:44,750 INFO Top 10 job recommendations generated
+2024-05-22 15:13:44,760 INFO 127.0.0.1 - - [22/May/2024 15:13:44] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 15:39:38,607 INFO Text extracted from resume PDF
+2024-05-22 15:39:38,608 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 15:39:38,608 INFO Text cleaned successfully
+2024-05-22 15:39:43,208 INFO Skills extracted from resume
+2024-05-22 15:39:44,163 INFO User embedding generated successfully
+2024-05-22 15:39:44,398 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 15:39:44,418 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 15:39:44,418 INFO Top 10 job recommendations generated
+2024-05-22 15:39:44,420 INFO 127.0.0.1 - - [22/May/2024 15:39:44] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:16:40,019 INFO Application started.
+2024-05-22 17:16:51,127 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2024-05-22 17:16:51,127 INFO [33mPress CTRL+C to quit[0m
+2024-05-22 17:17:30,064 INFO Text extracted from resume PDF
+2024-05-22 17:17:30,079 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:17:30,079 INFO Text cleaned successfully
+2024-05-22 17:17:35,035 INFO Skills extracted from resume
+2024-05-22 17:17:37,269 INFO User embedding generated successfully
+2024-05-22 17:17:37,503 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:17:37,566 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:17:37,566 INFO Top 10 job recommendations generated
+2024-05-22 17:17:37,581 INFO 127.0.0.1 - - [22/May/2024 17:17:37] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:26:29,503 INFO Application started.
+2024-05-22 17:26:37,829 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2024-05-22 17:26:37,831 INFO [33mPress CTRL+C to quit[0m
+2024-05-22 17:45:04,665 INFO Application started.
+2024-05-22 17:45:14,062 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2024-05-22 17:45:14,062 INFO [33mPress CTRL+C to quit[0m
+2024-05-22 17:46:19,296 ERROR No file uploaded
+2024-05-22 17:46:19,296 INFO 127.0.0.1 - - [22/May/2024 17:46:19] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:46:28,715 INFO Text extracted from resume PDF
+2024-05-22 17:46:28,715 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:46:28,715 INFO Text cleaned successfully
+2024-05-22 17:46:33,801 INFO Skills extracted from resume
+2024-05-22 17:46:36,121 INFO User embedding generated successfully
+2024-05-22 17:46:36,371 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:46:36,405 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:46:36,405 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:46:36,419 INFO 127.0.0.1 - - [22/May/2024 17:46:36] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:47:53,680 INFO Text extracted from resume PDF
+2024-05-22 17:47:53,680 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:47:53,680 INFO Text cleaned successfully
+2024-05-22 17:47:58,199 INFO Skills extracted from resume
+2024-05-22 17:47:58,355 INFO User embedding generated successfully
+2024-05-22 17:47:58,546 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:47:58,562 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:47:58,562 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:47:58,562 INFO 127.0.0.1 - - [22/May/2024 17:47:58] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:48:17,849 INFO Text extracted from resume PDF
+2024-05-22 17:48:17,849 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:48:17,849 INFO Text cleaned successfully
+2024-05-22 17:48:18,365 INFO Text extracted from resume PDF
+2024-05-22 17:48:18,396 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:48:18,396 INFO Text cleaned successfully
+2024-05-22 17:48:18,568 INFO Text extracted from resume PDF
+2024-05-22 17:48:18,599 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:48:18,599 INFO Text cleaned successfully
+2024-05-22 17:48:27,328 INFO Skills extracted from resume
+2024-05-22 17:48:29,644 INFO User embedding generated successfully
+2024-05-22 17:48:29,957 INFO Skills extracted from resume
+2024-05-22 17:48:32,374 INFO User embedding generated successfully
+2024-05-22 17:48:32,872 INFO Skills extracted from resume
+2024-05-22 17:48:33,075 INFO User embedding generated successfully
+2024-05-22 17:48:33,153 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:48:33,153 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:48:33,153 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:48:33,169 INFO 127.0.0.1 - - [22/May/2024 17:48:33] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:48:33,278 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:48:33,278 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:48:33,278 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:48:33,294 INFO 127.0.0.1 - - [22/May/2024 17:48:33] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:48:33,356 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:48:33,356 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:48:33,356 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:48:33,356 INFO 127.0.0.1 - - [22/May/2024 17:48:33] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:48:48,729 INFO 127.0.0.1 - - [22/May/2024 17:48:48] "OPTIONS /signin HTTP/1.1" 200 -
+2024-05-22 17:48:49,546 INFO User authenticated successfully
+2024-05-22 17:48:49,546 INFO 127.0.0.1 - - [22/May/2024 17:48:49] "POST /signin HTTP/1.1" 200 -
+2024-05-22 17:48:57,875 INFO Text extracted from resume PDF
+2024-05-22 17:48:57,875 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:48:57,875 INFO Text cleaned successfully
+2024-05-22 17:49:02,285 INFO Skills extracted from resume
+2024-05-22 17:49:02,444 INFO User embedding generated successfully
+2024-05-22 17:49:02,667 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:49:02,670 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:49:02,670 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:49:02,671 INFO 127.0.0.1 - - [22/May/2024 17:49:02] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:52:40,612 INFO Text extracted from resume PDF
+2024-05-22 17:52:40,612 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:52:40,612 INFO Text cleaned successfully
+2024-05-22 17:52:45,236 INFO Skills extracted from resume
+2024-05-22 17:52:45,392 INFO User embedding generated successfully
+2024-05-22 17:52:45,580 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:52:45,596 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:52:45,596 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:52:45,596 INFO 127.0.0.1 - - [22/May/2024 17:52:45] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:53:31,693 INFO Text extracted from resume PDF
+2024-05-22 17:53:31,693 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:53:31,693 INFO Text cleaned successfully
+2024-05-22 17:53:35,852 INFO Skills extracted from resume
+2024-05-22 17:53:36,008 INFO User embedding generated successfully
+2024-05-22 17:53:36,195 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:53:36,195 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:53:36,195 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:53:36,195 INFO 127.0.0.1 - - [22/May/2024 17:53:36] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:53:57,411 INFO Text extracted from resume PDF
+2024-05-22 17:53:57,411 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:53:57,411 INFO Text cleaned successfully
+2024-05-22 17:53:57,850 INFO Text extracted from resume PDF
+2024-05-22 17:53:57,881 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:53:57,881 INFO Text cleaned successfully
+2024-05-22 17:54:02,818 INFO Skills extracted from resume
+2024-05-22 17:54:03,647 INFO User embedding generated successfully
+2024-05-22 17:54:04,991 INFO Skills extracted from resume
+2024-05-22 17:54:05,100 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:54:05,116 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:54:05,116 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:54:05,116 INFO 127.0.0.1 - - [22/May/2024 17:54:05] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:54:05,162 INFO User embedding generated successfully
+2024-05-22 17:54:05,350 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:54:05,350 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:54:05,350 ERROR An error occurred: "['Link'] not in index"
+2024-05-22 17:54:05,350 INFO 127.0.0.1 - - [22/May/2024 17:54:05] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:55:16,568 INFO Application started.
+2024-05-22 17:55:25,866 INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.9:5000
+2024-05-22 17:55:25,866 INFO [33mPress CTRL+C to quit[0m
+2024-05-22 17:55:52,569 INFO Text extracted from resume PDF
+2024-05-22 17:55:52,569 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:55:52,569 INFO Text cleaned successfully
+2024-05-22 17:55:57,640 INFO Skills extracted from resume
+2024-05-22 17:56:00,063 INFO User embedding generated successfully
+2024-05-22 17:56:00,297 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:56:00,391 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:56:00,391 INFO Top 10 job recommendations generated
+2024-05-22 17:56:00,406 INFO 127.0.0.1 - - [22/May/2024 17:56:00] "POST /api/process-resume HTTP/1.1" 200 -
+2024-05-22 17:58:12,000 INFO Text extracted from resume PDF
+2024-05-22 17:58:12,000 INFO Text cleaned successfully: nikhil nm internatio...
+2024-05-22 17:58:12,000 INFO Text cleaned successfully
+2024-05-22 17:58:17,721 INFO Skills extracted from resume
+2024-05-22 17:58:17,924 INFO User embedding generated successfully
+2024-05-22 17:58:18,143 INFO Cosine similarity matrix and merged DataFrame generated successfully.
+2024-05-22 17:58:18,143 INFO Cosine similarity matrix and merged DataFrame generated successfully
+2024-05-22 17:58:18,143 INFO Top 10 job recommendations generated
+2024-05-22 17:58:18,143 INFO 127.0.0.1 - - [22/May/2024 17:58:18] "POST /api/process-resume HTTP/1.1" 200 -
