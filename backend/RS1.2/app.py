@@ -227,7 +227,7 @@ def process_resume():
             logging.info('Cosine similarity matrix and merged DataFrame generated successfully')
 
             # Get top 10 job recommendations from the merged DataFrame
-            top_10_recommendations = merged_df['Position'].head(10).tolist()
+            top_10_recommendations = list(merged_df[['Position', 'links']].head(10).itertuples(index=False, name=None))
             logging.info('Top 10 job recommendations generated')
 
             return jsonify(message="Sentence embeddings generated successfully", jobRecommendations=top_10_recommendations)
