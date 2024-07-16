@@ -8,8 +8,14 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
-    role: 'user', // Default role
-    isRegistering: false
+    role: 'user',
+    isRegistering: false,
+    name: '',
+    phoneNumber: '',
+    cgpa: '',
+    branch: '',
+    semester: '',
+    errorMessage: '',
   };
 
   handleChange = (e) => {
@@ -26,13 +32,13 @@ class Login extends Component {
     try {
       const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber, role });
       if (response.status === 201) {
-        alert('Registration successful');
-        this.setState({ isRegistering: false });
+        localStorage.setItem('token', response.data.token);
+        window.location.href = '/additional-info'; // Redirect to additional info page
       } else {
-        alert('Registration failed: ' + (response.data.msg || 'Unknown error'));
+        this.setState({ errorMessage: 'Registration failed: ' + (response.data.msg || 'Unknown error') });
       }
     } catch (error) {
-      alert('Registration failed: ' + (error.response ? error.response.data.msg : 'Unknown error'));
+      this.setState({ errorMessage: 'Registration failed: ' + (error.response ? error.response.data.msg : 'Unknown error') });
     }
   };
 
@@ -49,15 +55,15 @@ class Login extends Component {
           window.location.href = '/Uploader';
         }
       } else {
-        alert('Login failed: ' + (response.data.msg || 'Unknown error'));
+        this.setState({ errorMessage: 'Login failed: ' + (response.data.msg || 'Unknown error') });
       }
     } catch (error) {
-      alert('Login failed: ' + (error.response ? error.response.data.msg : 'Unknown error'));
+      this.setState({ errorMessage: 'Login failed: ' + (error.response ? error.response.data.msg : 'Unknown error') });
     }
   };
 
   render() {
-    const { email, password, role, isRegistering } = this.state;
+    const { email, password, role, name, phoneNumber, isRegistering, cgpa, branch, semester, errorMessage } = this.state;
 
     return (
       <div>
@@ -74,7 +80,7 @@ class Login extends Component {
                     type="text"
                     name="name"
                     placeholder="Name"
-                    value={this.state.name}
+                    value={name}
                     onChange={this.handleChange}
                     required
                   />
@@ -82,7 +88,7 @@ class Login extends Component {
                     type="text"
                     name="phoneNumber"
                     placeholder="Phone Number"
-                    value={this.state.phoneNumber}
+                    value={phoneNumber}
                     onChange={this.handleChange}
                     required
                   />
@@ -104,6 +110,35 @@ class Login extends Component {
                 onChange={this.handleChange}
                 required
               />
+              {/* {isRegistering && (
+                <>
+                  <input
+                    type="number"
+                    name="cgpa"
+                    placeholder="CGPA"
+                    value={cgpa}
+                    onChange={this.handleChange}
+                    step="0.01"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="branch"
+                    placeholder="Branch"
+                    value={branch}
+                    onChange={this.handleChange}
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="semester"
+                    placeholder="Semester"
+                    value={semester}
+                    onChange={this.handleChange}
+                    required
+                  />
+                </>
+              )} */}
               {!isRegistering && (
                 <select name="role" value={role} onChange={this.handleChange} required>
                   <option value="user">User</option>
@@ -118,6 +153,8 @@ class Login extends Component {
                 {isRegistering ? 'Already have an account? Login' : 'Don\'t have an account? Register'}
               </button>
             </div>
+
+            {errorMessage && <p className="error-message">{errorMessage}</p>}
           </div>
         </div>
         <Footer />

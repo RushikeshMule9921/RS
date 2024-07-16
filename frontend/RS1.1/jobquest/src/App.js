@@ -4,7 +4,8 @@ import Home from './home';
 import Login from './login';
 import Upload from './Uploader';
 import Recommendations from './Recommendations';
-import AdminPage from './AdminPage'; // Example of an admin page
+import AdditionalInfo from './additionalinfo'; // Import AdditionalInfo component
+import AdminPage from './AdminPage'; // Import AdminPage component
 import ProtectedRoute from './ProtectedRoute';
 import './App.css';
 
@@ -26,6 +27,10 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
+        <Route 
+          path="/additional-info" 
+          element={<ProtectedRoute element={<AdditionalInfo />} />}
+        />
         <Route 
           path="/Uploader" 
           element={<ProtectedRoute element={<Upload />} allowedRoles={['user', 'admin']} />}
