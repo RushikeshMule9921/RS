@@ -1,3 +1,4 @@
+// middleware/auth.js
 const jwt = require('jsonwebtoken');
 const { secretOrKey } = require('../config/keys');
 
@@ -9,7 +10,7 @@ function verifyToken(req, res, next) {
     const token = req.headers['authorization'];
     if (!token) return res.status(403).send('Token is required');
 
-    jwt.verify(token, secretOrKey, (err, decoded) => {
+    jwt.verify(token.replace('Bearer ', ''), secretOrKey, (err, decoded) => {
         if (err) return res.status(500).send('Failed to authenticate token');
         req.user = decoded;
         next();

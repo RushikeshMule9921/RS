@@ -17,7 +17,6 @@ const AdditionalInfo = () => {
     if (!token) {
       navigate('/login');
     } else {
-      // Fetch user information from local storage or your backend
       const userInfo = JSON.parse(localStorage.getItem('userInfo'));
       if (userInfo) {
         setName(userInfo.name);
@@ -30,10 +29,12 @@ const AdditionalInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
+    const userInfo = JSON.parse(localStorage.getItem('userInfo')); // Retrieve userInfo from localStorage
+    const userId = userInfo.userId; // Get userId from userInfo
     try {
       const response = await axios.post(
-        'http://localhost:5000/userinfo',
-        { name, email, phoneNumber, cgpa, branch, semester },
+        'http://localhost:5000/additional-info',
+        { userId, cgpa, branch, semester }, // Include userId in the payload
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -41,9 +42,9 @@ const AdditionalInfo = () => {
         }
       );
       setMessage(response.data.msg);
-      navigate('/Uploader'); // Redirect to Uploader or any other page
+      navigate('/Uploader');
     } catch (error) {
-      setMessage('Error submitting additional information');
+      setMessage('Error submitting additional information: ' + (error.response ? error.response.data.msg : 'Unknown error'));
     }
   };
 
@@ -51,33 +52,6 @@ const AdditionalInfo = () => {
     <div>
       <h1>Additional Information</h1>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </label>
-        <label>
-          Phone Number:
-          <input
-            type="text"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            required
-          />
-        </label>
         <label>
           CGPA:
           <input

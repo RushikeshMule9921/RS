@@ -6,15 +6,13 @@ import axios from 'axios';
 
 class Login extends Component {
   state = {
+    userId: '',
     email: '',
     password: '',
     role: 'user',
     isRegistering: false,
     name: '',
     phoneNumber: '',
-    cgpa: '',
-    branch: '',
-    semester: '',
     errorMessage: '',
   };
 
@@ -32,8 +30,16 @@ class Login extends Component {
     try {
       const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber, role });
       if (response.status === 201) {
-        localStorage.setItem('token', response.data.token);
-        window.location.href = '/additional-info'; // Redirect to additional info page
+        const { token, user } = response.data; // Get user object from response
+        localStorage.setItem('token', token);
+        localStorage.setItem('userInfo', JSON.stringify({
+          userId: user.id, // Store userId
+          name: user.name,
+          email: user.email,
+          phoneNumber,
+          role: user.role
+        }));
+        window.location.href = '/additional-info';
       } else {
         this.setState({ errorMessage: 'Registration failed: ' + (response.data.msg || 'Unknown error') });
       }
@@ -41,6 +47,7 @@ class Login extends Component {
       this.setState({ errorMessage: 'Registration failed: ' + (error.response ? error.response.data.msg : 'Unknown error') });
     }
   };
+  
 
   handleLogin = async (e) => {
     e.preventDefault();
@@ -49,6 +56,8 @@ class Login extends Component {
       const response = await axios.post('http://localhost:5000/login', { email, password, role });
       if (response.status === 200) {
         localStorage.setItem('token', response.data.token);
+        localStorage.setItem('email', email);
+        
         if (role === 'admin') {
           window.location.href = '/adminpage';
         } else {
@@ -63,7 +72,7 @@ class Login extends Component {
   };
 
   render() {
-    const { email, password, role, name, phoneNumber, isRegistering, cgpa, branch, semester, errorMessage } = this.state;
+    const { email, password, role, name, phoneNumber, isRegistering, errorMessage } = this.state;
 
     return (
       <div>
@@ -110,35 +119,6 @@ class Login extends Component {
                 onChange={this.handleChange}
                 required
               />
-              {/* {isRegistering && (
-                <>
-                  <input
-                    type="number"
-                    name="cgpa"
-                    placeholder="CGPA"
-                    value={cgpa}
-                    onChange={this.handleChange}
-                    step="0.01"
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="branch"
-                    placeholder="Branch"
-                    value={branch}
-                    onChange={this.handleChange}
-                    required
-                  />
-                  <input
-                    type="text"
-                    name="semester"
-                    placeholder="Semester"
-                    value={semester}
-                    onChange={this.handleChange}
-                    required
-                  />
-                </>
-              )} */}
               {!isRegistering && (
                 <select name="role" value={role} onChange={this.handleChange} required>
                   <option value="user">User</option>

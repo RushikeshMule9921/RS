@@ -1,14 +1,17 @@
-// models/UserInfo.js
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const UserInfoSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true, unique: true },
-  name: { type: String, required: true },
-  email: { type: String, required: true },
-  phoneNumber: { type: String, required: true },
+// Define the schema for additional user details
+const userDetailsSchema = new Schema({
+  userId: { 
+    type: Schema.Types.ObjectId, 
+    ref: 'User', // Reference to the User schema
+    required: true 
+  },
   cgpa: { type: Number, required: true },
   branch: { type: String, required: true },
   semester: { type: String, required: true }
 });
 
-module.exports = mongoose.model('UserInfo', UserInfoSchema);
+const UserDetails = mongoose.model('UserDetails', userDetailsSchema);
+module.exports = UserDetails;
