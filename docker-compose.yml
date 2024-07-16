@@ -1,0 +1,26 @@
+version: "3.9"
+
+networks:
+  jobnet:
+
+services:
+  backend:
+    image: rushikeshmule9921/backend:latest
+    container_name: spe_backend
+    ports:
+      - "5000:5000"
+    networks:
+      - jobnet
+    environment:
+      - ALLOW_ORIGIN=http://localhost:3000  # Change this to the origin of your frontend app
+    # You may also need to expose additional headers and methods as needed
+
+  frontend:
+    image: rushikeshmule9921/frontend:latest
+    container_name: spe_frontend
+    ports:
+      - "3000:3000"
+    networks:
+      - jobnet
+    depends_on:
+      - backend
