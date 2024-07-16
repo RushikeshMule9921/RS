@@ -8,8 +8,6 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
-    name: '',
-    phoneNumber: '',
     isRegistering: false
   };
 
@@ -24,20 +22,15 @@ class Login extends Component {
   handleRegister = async (e) => {
     e.preventDefault();
     const { name, email, password, phoneNumber } = this.state;
-    console.log('Attempting registration with:', { name, email, password: '********', phoneNumber });
     try {
       const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber });
-      console.log('Registration response:', response);
       if (response.status === 201) {
-        console.log('Registration successful');
         alert('Registration successful');
         this.setState({ isRegistering: false });
       } else {
-        console.log('Registration failed with status:', response.status);
         alert('Registration failed: ' + (response.data.msg || 'Unknown error'));
       }
     } catch (error) {
-      console.error('Registration error:', error.response ? error.response.data : error.message);
       alert('Registration failed: ' + (error.response ? error.response.data.msg : 'Unknown error'));
     }
   };
@@ -45,20 +38,15 @@ class Login extends Component {
   handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = this.state;
-    //console.log('Attempting login with:', { email, password: '********' });
     try {
       const response = await axios.post('http://localhost:5000/login', { email, password });
-      console.log('Login response:', response);
       if (response.status === 200) {
-        console.log('Login successful');
         localStorage.setItem('token', response.data.token);
         window.location.href = '/Uploader';
       } else {
-        console.log('Login failed with status:', response.status);
         alert('Login failed: ' + (response.data.msg || 'Unknown error'));
       }
     } catch (error) {
-      console.error('Login error:', error.response ? error.response.data : error.message);
       alert('Login failed: ' + (error.response ? error.response.data.msg : 'Unknown error'));
     }
   };

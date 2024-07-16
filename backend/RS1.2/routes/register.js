@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/user'); // Adjust the path as needed
-const bcrypt = require('bcrypt');
 const { generateToken } = require('../middleware/auth'); // Adjust the path as needed
 
 router.post('/', async (req, res) => {
@@ -14,14 +13,11 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ msg: 'Email is already registered' });
         }
 
-        // Hash the password
-        const hashedPassword = await bcrypt.hash(password, 10);
-
         // Create a new user
         const newUser = new User({
             name,
             email,
-            password: hashedPassword,
+            password, 
             phoneNumber
         });
 
