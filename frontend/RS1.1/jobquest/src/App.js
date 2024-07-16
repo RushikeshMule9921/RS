@@ -4,7 +4,8 @@ import Home from './home';
 import Login from './login';
 import Upload from './Uploader';
 import Recommendations from './Recommendations';
-import ProtectedRoute from './ProtectedRoute'; // Import the ProtectedRoute component
+import AdminPage from './AdminPage'; // Example of an admin page
+import ProtectedRoute from './ProtectedRoute';
 import './App.css';
 
 const getJobRecommendationsFromQueryParams = () => {
@@ -27,15 +28,20 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route 
           path="/Uploader" 
-          element={<ProtectedRoute element={<Upload />} />}
+          element={<ProtectedRoute element={<Upload />} allowedRoles={['user', 'admin']} />}
         />
         <Route 
           path="/recommendations" 
           element={
             <ProtectedRoute 
               element={<Recommendations jobRecommendations={getJobRecommendationsFromQueryParams()} />} 
+              allowedRoles={['user', 'admin']} 
             />
           } 
+        />
+        <Route 
+          path="/adminpage" 
+          element={<ProtectedRoute element={<AdminPage />} allowedRoles={['admin']} />}
         />
       </Routes>
     </BrowserRouter>

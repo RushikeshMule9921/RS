@@ -8,6 +8,7 @@ class Login extends Component {
   state = {
     email: '',
     password: '',
+    role: 'user', // Default role
     isRegistering: false
   };
 
@@ -21,9 +22,9 @@ class Login extends Component {
 
   handleRegister = async (e) => {
     e.preventDefault();
-    const { name, email, password, phoneNumber } = this.state;
+    const { name, email, password, phoneNumber, role } = this.state;
     try {
-      const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber });
+      const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber, role });
       if (response.status === 201) {
         alert('Registration successful');
         this.setState({ isRegistering: false });
@@ -37,12 +38,16 @@ class Login extends Component {
 
   handleLogin = async (e) => {
     e.preventDefault();
-    const { email, password } = this.state;
+    const { email, password, role } = this.state;
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+      const response = await axios.post('http://localhost:5000/login', { email, password, role });
       if (response.status === 200) {
         localStorage.setItem('token', response.data.token);
-        window.location.href = '/Uploader';
+        if (role === 'admin') {
+          window.location.href = '/adminpage';
+        } else {
+          window.location.href = '/Uploader';
+        }
       } else {
         alert('Login failed: ' + (response.data.msg || 'Unknown error'));
       }
@@ -52,7 +57,7 @@ class Login extends Component {
   };
 
   render() {
-    const { email, password, name, phoneNumber, isRegistering } = this.state;
+    const { email, password, role, isRegistering } = this.state;
 
     return (
       <div>
@@ -69,7 +74,7 @@ class Login extends Component {
                     type="text"
                     name="name"
                     placeholder="Name"
-                    value={name}
+                    value={this.state.name}
                     onChange={this.handleChange}
                     required
                   />
@@ -77,7 +82,7 @@ class Login extends Component {
                     type="text"
                     name="phoneNumber"
                     placeholder="Phone Number"
-                    value={phoneNumber}
+                    value={this.state.phoneNumber}
                     onChange={this.handleChange}
                     required
                   />
@@ -99,6 +104,12 @@ class Login extends Component {
                 onChange={this.handleChange}
                 required
               />
+              {!isRegistering && (
+                <select name="role" value={role} onChange={this.handleChange} required>
+                  <option value="user">User</option>
+                  <option value="admin">Admin</option>
+                </select>
+              )}
               <button type="submit">{isRegistering ? 'Register' : 'Login'}</button>
             </form>
 

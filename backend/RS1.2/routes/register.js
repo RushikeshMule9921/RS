@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/user'); // Adjust the path as needed
-const { generateToken } = require('../middleware/auth'); // Adjust the path as needed
+const User = require('../models/user');
+const { generateToken } = require('../middleware/auth');
 
 router.post('/', async (req, res) => {
-    const { name, email, password, phoneNumber } = req.body;
+    const { name, email, password, phoneNumber, role } = req.body;
 
     try {
         // Check if the email is already registered
@@ -17,8 +17,9 @@ router.post('/', async (req, res) => {
         const newUser = new User({
             name,
             email,
-            password, 
-            phoneNumber
+            password,
+            phoneNumber,
+            role: role === 'admin' ? 'admin' : 'user' // This line allows setting the role to 'admin' if specified
         });
 
         await newUser.save();
@@ -26,7 +27,7 @@ router.post('/', async (req, res) => {
         // Generate a token
         const token = generateToken(newUser);
 
-        res.status(201).json({ token });
+        res.status(201).json({ token, user: { id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role } });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server error');
