@@ -4,30 +4,28 @@ const User = require('../models/user');
 const { generateToken } = require('../middleware/auth');
 
 router.post('/', async (req, res) => {
-    const { name, email, password, phoneNumber, role } = req.body;
+    const { name, email, password, phoneNumber, rollNumber, role } = req.body;
 
     try {
-        // Check if the email is already registered
-        const existingUser = await User.findOne({ email });
+        const existingUser = await User.findOne({ rollNumber });
         if (existingUser) {
-            return res.status(400).json({ msg: 'Email is already registered' });
+            return res.status(400).json({ msg: 'Roll number is already registered' });
         }
 
-        // Create a new user
         const newUser = new User({
             name,
             email,
             password,
             phoneNumber,
-            role: role === 'admin' ? 'admin' : 'user' // This line allows setting the role to 'admin' if specified
+            rollNumber,
+            role: role === 'admin' ? 'admin' : 'user'
         });
 
         await newUser.save();
 
-        // Generate a token
         const token = generateToken(newUser);
 
-        res.status(201).json({ token, user: { id: newUser._id, name: newUser.name, email: newUser.email, role: newUser.role } });
+        res.status(201).json({ token, user: { rollNumber: newUser.rollNumber, name: newUser.name, email: newUser.email, role: newUser.role } });
     } catch (err) {
         console.error(err);
         res.status(500).send('Server error');

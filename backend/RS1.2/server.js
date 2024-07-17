@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const loginRoutes = require('./routes/login');
 const registerRoutes = require('./routes/register');
-const additionalInfoRoutes = require('./routes/addtionalinfo'); // Ensure the file name is correct
+const additionalInfoRoutes = require('./routes/addtionalinfo'); 
+const adminRoutes = require('./routes/admin');// Ensure the file name is correct
 
 const app = express();
 
@@ -21,6 +22,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use('/login', loginRoutes);
 app.use('/register', registerRoutes);
 app.use('/additional-info', additionalInfoRoutes); // Ensure this path matches the frontend
+app.use('/admin', adminRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
