@@ -29,12 +29,10 @@ const AdditionalInfo = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem('token');
-    const userInfo = JSON.parse(localStorage.getItem('userInfo')); // Retrieve userInfo from localStorage
-    const userId = userInfo.userId; // Get userId from userInfo
     try {
       const response = await axios.post(
         'http://localhost:5000/additional-info',
-        { userId, cgpa, branch, semester }, // Include userId in the payload
+        { cgpa, branch, semester },
         {
           headers: {
             Authorization: `Bearer ${token}`,

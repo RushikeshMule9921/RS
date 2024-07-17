@@ -6,12 +6,12 @@ import axios from 'axios';
 
 class Login extends Component {
   state = {
-    userId: '',
-    email: '',
+    rollNumber: '',
     password: '',
     role: 'user',
     isRegistering: false,
     name: '',
+    email: '',
     phoneNumber: '',
     errorMessage: '',
   };
@@ -26,14 +26,14 @@ class Login extends Component {
 
   handleRegister = async (e) => {
     e.preventDefault();
-    const { name, email, password, phoneNumber, role } = this.state;
+    const { name, email, password, phoneNumber, rollNumber, role } = this.state;
     try {
-      const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber, role });
+      const response = await axios.post('http://localhost:5000/register', { name, email, password, phoneNumber, rollNumber, role });
       if (response.status === 201) {
-        const { token, user } = response.data; // Get user object from response
+        const { token, user } = response.data;
         localStorage.setItem('token', token);
         localStorage.setItem('userInfo', JSON.stringify({
-          userId: user.id, // Store userId
+          rollNumber: user.rollNumber,
           name: user.name,
           email: user.email,
           phoneNumber,
@@ -47,16 +47,16 @@ class Login extends Component {
       this.setState({ errorMessage: 'Registration failed: ' + (error.response ? error.response.data.msg : 'Unknown error') });
     }
   };
-  
 
   handleLogin = async (e) => {
     e.preventDefault();
-    const { email, password, role } = this.state;
+    const { rollNumber, password, role } = this.state;
     try {
-      const response = await axios.post('http://localhost:5000/login', { email, password, role });
+      const response = await axios.post('http://localhost:5000/login', { rollNumber, password, role });
       if (response.status === 200) {
-        localStorage.setItem('token', response.data.token);
-        localStorage.setItem('email', email);
+        const { token, user } = response.data;
+        localStorage.setItem('token', token);
+        localStorage.setItem('userInfo', JSON.stringify(user));
         
         if (role === 'admin') {
           window.location.href = '/adminpage';
@@ -72,7 +72,7 @@ class Login extends Component {
   };
 
   render() {
-    const { email, password, role, name, phoneNumber, isRegistering, errorMessage } = this.state;
+    const { rollNumber, password, role, name, email, phoneNumber, isRegistering, errorMessage } = this.state;
 
     return (
       <div>
@@ -94,6 +94,14 @@ class Login extends Component {
                     required
                   />
                   <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={email}
+                    onChange={this.handleChange}
+                    required
+                  />
+                  <input
                     type="text"
                     name="phoneNumber"
                     placeholder="Phone Number"
@@ -104,10 +112,10 @@ class Login extends Component {
                 </>
               )}
               <input
-                type="email"
-                name="email"
-                placeholder="Email"
-                value={email}
+                type="text"
+                name="rollNumber"
+                placeholder="Roll Number"
+                value={rollNumber}
                 onChange={this.handleChange}
                 required
               />

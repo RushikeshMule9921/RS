@@ -1,9 +1,8 @@
-// middleware/auth.js
 const jwt = require('jsonwebtoken');
 const { secretOrKey } = require('../config/keys');
 
 function generateToken(user) {
-    return jwt.sign({ id: user._id, role: user.role }, secretOrKey, { expiresIn: '1h' });
+    return jwt.sign({ rollNumber: user.rollNumber, role: user.role }, secretOrKey, { expiresIn: '1h' });
 }
 
 function verifyToken(req, res, next) {
